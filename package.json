@@ -3,13 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@element-plus/icons": "^0.0.11",
+    "axios": "^0.24.0",
     "core-js": "^3.6.5",
+    "element-plus": "^1.2.0-beta.5",
     "husky": "^7.0.4",
+    "md5": "^2.3.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
@@ -31,15 +35,16 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^7.0.0",
     "sass": "^1.26.5",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "svg-sprite-loader": "^6.0.11"
   },
-  "gitHooks" : {
-    "pre-commit" : "lint-staged"
+  "gitHooks": {
+    "pre-commit": "lint-staged"
   },
-  "lint-staged":{
-    "src/**/*/.{js,vue,jsx}" :[
-        "eslint --fix",
-        "git add"
+  "lint-staged": {
+    "src/**/*.{js,vue,jsx}": [
+      "eslint --fix",
+      "git add"
     ]
   },
   "config": {
